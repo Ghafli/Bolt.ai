@@ -1,0 +1,17 @@
+{
+  "name": "bolt.ai+",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run start --prefix backend\" \"npm run start --prefix frontend\"",
+    "build": "npm run build --prefix frontend",
+    "test": "npm run test --prefix frontend && npm run test --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
